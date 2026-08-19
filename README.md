@@ -1,4 +1,5 @@
 # SMB Headless
+## Live URL: https://smb-sigma.vercel.app/
 
 A headless WordPress + Next.js marketing platform for **Small Business Marketing** — an SEO agency built for small businesses that refuse to be an afterthought.
 
