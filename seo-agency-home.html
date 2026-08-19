@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>document.documentElement.classList.add('js');</script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Small Business Marketing — Get Found on Google, Maps & AI Search</title>
+<meta name="description" content="Practical SEO, local search, and AI search optimization built for small businesses. Plain-English reporting, no lock-in contracts." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --brand:#ff0000; --gold:#fdcf58;
+    --ink:#0e1726; --body:#54607a;
+    --bg:#ffffff; --soft:#fafafa; --soft-2:#f4f6fb;
+    --line:#eeeeee; --line-2:#eef0f5;
+    --brand-soft:rgba(255,0,0,.06);
+    --radius:16px;
+    --maxw:1180px;
+    --shadow:0 18px 50px -24px rgba(15,25,38,.25);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--body);background:var(--bg);line-height:1.65;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,h4{font-family:"Manrope","Inter",sans-serif;color:var(--ink);line-height:1.15;font-weight:800;letter-spacing:-.02em;margin:0}
+  p{margin:0}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .grad{background:linear-gradient(90deg,var(--brand) 0%,var(--gold) 50%,var(--brand) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+  /* buttons (pill) */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:600;font-size:1rem;border-radius:100px;padding:14px 30px;cursor:pointer;border:1.5px solid transparent;transition:.2s transform,.2s box-shadow,.2s background,color;white-space:nowrap}
+  .btn:active{transform:translateY(1px)}
+  .btn-primary{background:radial-gradient(circle at 30% 30%,var(--gold) 0%,var(--brand) 55%,var(--brand));color:#fff;box-shadow:0 10px 24px -8px rgba(255,0,0,.4)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 34px -10px rgba(255,0,0,.5)}
+  .btn-ghost{background:#fff;border-color:rgba(255,0,0,.4);color:var(--brand)}
+  .btn-ghost:hover{background:var(--brand);color:#fff;transform:translateY(-2px);box-shadow:0 12px 26px -10px rgba(255,0,0,.4)}
+
+  .eyebrow{display:inline-flex;align-items:center;gap:9px;font-family:"Inter";font-size:.82rem;font-weight:600;color:var(--brand);border:1.5px solid rgba(255,0,0,.35);background:var(--brand-soft);border-radius:100px;padding:7px 16px;margin:0 0 20px}
+  .eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--brand)}
+
+  .section{padding:96px 0}
+  .section.alt{background:var(--soft)}
+  .head{text-align:center;max-width:760px;margin:0 auto 54px}
+  .head h2{font-size:clamp(1.9rem,4vw,2.9rem)}
+  .head p{margin-top:16px;font-size:1.08rem}
+
+  /* TOP BAR */
+  .topbar{background:linear-gradient(90deg,var(--brand),var(--gold));color:#fff}
+  .topbar .wrap{display:flex;align-items:center;justify-content:center;gap:14px;min-height:46px;font-size:.92rem;font-weight:600;flex-wrap:wrap;text-align:center}
+  .topbar a{background:#fff;color:var(--brand);border-radius:100px;padding:6px 16px;font-weight:700;transition:.2s}
+  .topbar a:hover{background:rgba(255,255,255,.85)}
+
+  /* HEADER */
+  .header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.78);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .logo{display:flex;align-items:center;gap:10px;font-family:"Manrope";font-weight:800;font-size:1.3rem;color:var(--ink)}
+  .logo .mark{width:36px;height:36px;border-radius:11px;background:radial-gradient(circle at 30% 30%,var(--gold),var(--brand));display:grid;place-items:center;color:#fff;font-size:1rem}
+  .logo small{display:block;font-size:.62rem;font-weight:600;letter-spacing:.14em;color:var(--body);text-transform:uppercase;line-height:1}
+  .nav-links{display:flex;gap:30px;font-size:.96rem;font-weight:500;color:var(--ink)}
+  .nav-links a:hover{color:var(--brand)}
+  .nav-cta{display:flex;align-items:center;gap:14px}
+
+  /* HERO */
+  .hero{text-align:center;padding:88px 0 96px;position:relative;overflow:hidden}
+  .hero::before{content:"";position:absolute;inset:0;background:
+      radial-gradient(500px 260px at 50% 0%,rgba(255,0,0,.08),transparent 70%),
+      radial-gradient(400px 240px at 85% 20%,rgba(253,207,88,.12),transparent 70%);pointer-events:none}
+  .hero .inner{position:relative;max-width:880px;margin:0 auto}
+  .hero h1{font-size:clamp(2.4rem,5.4vw,4rem);letter-spacing:-.03em}
+  .hero p.sub{font-size:1.16rem;max-width:720px;margin:24px auto 36px}
+  .hero-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+  .hero .trust{margin-top:36px;display:flex;gap:24px;justify-content:center;flex-wrap:wrap;font-size:.9rem;color:var(--ink);font-weight:500}
+  .hero .trust span{display:flex;gap:8px;align-items:center}
+  .hero .trust b{color:var(--brand)}
+
+  /* MARQUEE */
+  .marquee-sec{padding:40px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--soft)}
+  .marquee-sec .title{text-align:center;font-size:.95rem;font-weight:600;color:var(--ink);margin-bottom:26px}
+  .marquee{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+  .marquee-track{display:flex;gap:56px;width:max-content;animation:scroll 22s linear infinite}
+  .marquee:hover .marquee-track{animation-play-state:paused}
+  .marquee-track span{font-family:"Manrope";font-weight:800;font-size:1.35rem;color:#b6bdcc;white-space:nowrap;display:flex;align-items:center;gap:12px}
+  .marquee-track span::before{content:"\2726";color:var(--brand);font-size:1rem}
+  @keyframes scroll{to{transform:translateX(-50%)}}
+
+  /* SPLIT / WHO */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .split h2{font-size:clamp(1.8rem,3.6vw,2.5rem)}
+  .split p.intro{margin:18px 0 26px}
+  .split .visual{border-radius:22px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);background:linear-gradient(135deg,var(--brand-soft),#fff);aspect-ratio:4/3;display:grid;place-items:center}
+  .split .visual .gauge{width:74%;}
+  .bullets{display:flex;flex-direction:column;gap:16px;margin-top:8px}
+  .bullet{display:flex;gap:15px}
+  .bullet .ico{flex:0 0 auto;width:44px;height:44px;border-radius:12px;background:var(--brand-soft);border:1px solid rgba(255,0,0,.2);display:grid;place-items:center;color:var(--brand);font-size:1.15rem}
+  .bullet h4{font-size:1.05rem;margin-bottom:4px}
+  .bullet p{font-size:.96rem}
+
+  /* SERVICES */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .cards.c2{grid-template-columns:repeat(2,1fr)}
+  .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px 28px;transition:.25s transform,.25s box-shadow,.25s border-color}
+  .card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:rgba(255,0,0,.25)}
+  .card .icon{width:56px;height:56px;border-radius:15px;display:grid;place-items:center;font-size:1.55rem;background:linear-gradient(135deg,var(--brand-soft),rgba(253,207,88,.18));margin-bottom:20px}
+  .card h3{font-size:1.2rem;margin-bottom:12px}
+  .card p{font-size:.98rem}
+  .card a.more{display:inline-flex;align-items:center;gap:8px;color:var(--brand);font-weight:600;margin-top:18px;font-size:.95rem}
+  .card a.more:hover{gap:12px}
+
+  /* WHY */
+  .why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+  .why{display:flex;gap:18px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;transition:.25s transform,box-shadow}
+  .why:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+  .why .check{flex:0 0 auto;width:46px;height:46px;border-radius:50%;background:radial-gradient(circle at 30% 30%,var(--gold),var(--brand));color:#fff;display:grid;place-items:center;font-weight:800}
+  .why h4{margin-bottom:8px;font-size:1.1rem}
+  .why p{font-size:.98rem}
+
+  /* CASE STUDIES — sticky stack */
+  .stack{display:flex;flex-direction:column;gap:24px;padding-bottom:20px}
+  .case{position:sticky;border-radius:22px;padding:40px;border:1px solid rgba(255,0,0,.18);box-shadow:var(--shadow);background:linear-gradient(135deg,#fff 0%,#fff7f0 60%,#fff3e0 100%)}
+  .case:nth-child(1){top:100px}
+  .case:nth-child(2){top:120px}
+  .case:nth-child(3){top:140px}
+  .case:nth-child(4){top:160px}
+  .case:nth-child(5){top:180px}
+  .case .grid{display:grid;grid-template-columns:1.3fr 1fr;gap:34px;align-items:center}
+  .case .sector{font-size:.8rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--brand)}
+  .case h3{font-size:1.7rem;margin:10px 0 12px}
+  .case p{font-size:1rem;max-width:520px}
+  .case .view{display:inline-flex;align-items:center;gap:8px;margin-top:20px;color:var(--brand);font-weight:600}
+  .metrics{display:flex;flex-direction:column;gap:14px}
+  .metric{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px;text-align:center}
+  .metric .num{font-family:"Manrope";font-weight:800;font-size:2rem;color:var(--brand)}
+  .metric .lbl{color:var(--body);font-size:.85rem;margin-top:4px}
+
+  /* TESTIMONIALS */
+  .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .testi{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px;display:flex;flex-direction:column;transition:.25s transform,box-shadow}
+  .testi:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+  .stars{color:var(--gold);letter-spacing:2px;margin-bottom:16px;font-size:1.05rem}
+  .testi q{font-size:1.02rem;color:var(--ink);quotes:"\201C" "\201D";line-height:1.6}
+  .testi .who{margin-top:auto;padding-top:20px;color:var(--body);font-size:.9rem;font-weight:600}
+  .testi .who b{color:var(--ink)}
+
+  /* FAQ */
+  .faq{max-width:820px;margin:0 auto}
+  .faq details{border:1px solid var(--line);border-radius:14px;margin-bottom:14px;background:#fff;overflow:hidden;transition:.2s}
+  .faq details[open]{border-color:rgba(255,0,0,.3);box-shadow:0 8px 24px -18px rgba(255,0,0,.5)}
+  .faq summary{list-style:none;cursor:pointer;padding:22px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px;font-family:"Manrope";font-weight:700;font-size:1.05rem;color:var(--ink)}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary .plus{flex:0 0 auto;width:26px;height:26px;border-radius:50%;background:var(--brand-soft);color:var(--brand);display:grid;place-items:center;font-size:1.1rem;transition:.25s}
+  .faq details[open] .plus{transform:rotate(45deg);background:var(--brand);color:#fff}
+  .faq .ans{padding:0 24px 22px}
+
+  /* FINAL CTA */
+  .cta-final{position:relative;overflow:hidden;text-align:center;background:linear-gradient(135deg,#fff 0%,#fff2f0 45%,#fff6e2 100%);border:1px solid rgba(255,0,0,.18);border-radius:26px;padding:72px 30px;margin:40px 0 96px}
+  .cta-final h2{font-size:clamp(2rem,4.4vw,3rem);max-width:760px;margin:0 auto 18px}
+  .cta-final p{max-width:580px;margin:0 auto 30px;font-size:1.08rem}
+
+  /* FOOTER */
+  footer{background:#0e1726;color:#aeb8cc;padding:64px 0 34px}
+  footer h5{color:#fff;font-family:"Manrope";font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;margin:0 0 18px}
+  .foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:34px}
+  footer .logo{color:#fff}
+  footer .logo .mark{background:radial-gradient(circle at 30% 30%,var(--gold),var(--brand))}
+  footer .foot-about{margin-top:16px;max-width:280px;font-size:.95rem}
+  footer a{display:block;font-size:.95rem;margin-bottom:11px;color:#aeb8cc}
+  footer a:hover{color:#fff}
+  .foot-bottom{max-width:var(--maxw);margin:44px auto 0;padding:24px 24px 0;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;color:#8592a8;font-size:.85rem;flex-wrap:wrap;gap:12px}
+
+  @media(max-width:960px){
+    .cards,.cards.c2{grid-template-columns:repeat(2,1fr)}
+    .split{grid-template-columns:1fr;gap:30px}
+    .testi-grid{grid-template-columns:1fr}
+    .case .grid{grid-template-columns:1fr;gap:22px}
+    .foot-grid{grid-template-columns:1fr 1fr}
+    .case{top:80px}
+  }
+  @media(max-width:640px){
+    .nav-links{display:none}
+    .section{padding:70px 0}
+    .cards,.cards.c2,.why-grid{grid-template-columns:1fr}
+    .hero{padding:64px 0}
+    .foot-grid{grid-template-columns:1fr}
+  }
+  /* smooth reveal-on-scroll */
+  html.js .head,html.js .card,html.js .why,html.js .svc,html.js .step,html.js .item,html.js .bullet,html.js .check,html.js .metric,html.js .case,html.js .testi,html.js .region,html.js .cta-final,html.js .work,html.js .callout,html.js .visual,html.js .hero .inner,html.js .faq details{opacity:0;transform:translateY(30px);transition:opacity .75s ease,transform .75s cubic-bezier(.22,.7,.24,1);transition-delay:calc(var(--i,0)*70ms);will-change:opacity,transform}
+  html.js .head.in,html.js .card.in,html.js .why.in,html.js .svc.in,html.js .step.in,html.js .item.in,html.js .bullet.in,html.js .check.in,html.js .metric.in,html.js .case.in,html.js .testi.in,html.js .region.in,html.js .cta-final.in,html.js .work.in,html.js .callout.in,html.js .visual.in,html.js .hero .inner.in,html.js .faq details.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion: reduce){html.js .head,html.js .card,html.js .why,html.js .svc,html.js .step,html.js .item,html.js .bullet,html.js .check,html.js .metric,html.js .case,html.js .testi,html.js .region,html.js .cta-final,html.js .work,html.js .callout,html.js .visual,html.js .hero .inner,html.js .faq details{opacity:1!important;transform:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="wrap">
+    <span>&#128161; Tired of being invisible online? Get a free visibility audit — no pressure.</span>
+    <a href="#book">Get My Free Growth Plan</a>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="wrap nav">
+    <a class="logo" href="#">
+      <span class="mark">&#9670;</span>
+      <span>SBM<small>Small Business Marketing</small></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#why">Why Us</a>
+      <a href="#industries">Industries</a>
+      <a href="#results">Results</a>
+      <a href="#faq">FAQs</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="#book" class="btn btn-ghost" style="padding:11px 22px">Contact Us</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap inner">
+    <span class="eyebrow"><i class="dot"></i> #1 Growth Partner for Small Businesses</span>
+    <h1>We help small businesses <span class="grad">rank higher on Google</span>, show up on Maps, and get found in AI search.</h1>
+    <p class="sub">Most small businesses aren't losing to bigger budgets — they're losing to bigger visibility. We don't do inflated promises: just practical SEO, local search, and content done properly, with monthly reporting so you see exactly what's working.</p>
+    <div class="hero-actions">
+      <a href="#book" class="btn btn-primary">Get My Free Growth Plan &rarr;</a>
+      <a href="#book" class="btn btn-ghost">&#9742; Tell Us About Your Business</a>
+    </div>
+    <div class="trust">
+      <span><b>&#10003;</b> No lock-in contracts</span>
+      <span><b>&#10003;</b> Plain-English reporting</span>
+      <span><b>&#10003;</b> Built for small budgets</span>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<section class="marquee-sec">
+  <div class="wrap">
+    <div class="title">Brands that chose us to get found</div>
+  </div>
+  <div class="marquee">
+    <div class="marquee-track">
+      <span>Storeganise</span><span>Paragon Living</span><span>Glazing Refurbishments</span><span>The Sleepy Sloth</span><span>Spy Spot</span>
+      <span>Storeganise</span><span>Paragon Living</span><span>Glazing Refurbishments</span><span>The Sleepy Sloth</span><span>Spy Spot</span>
+    </div>
+  </div>
+</section>
+
+<!-- WHO WE WORK WITH -->
+<section class="section">
+  <div class="wrap split">
+    <div class="visual">
+      <svg class="gauge" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Growth chart">
+        <circle cx="100" cy="100" r="82" stroke="#f0f1f5" stroke-width="16"/>
+        <circle cx="100" cy="100" r="82" stroke="url(#g)" stroke-width="16" stroke-linecap="round" stroke-dasharray="402" stroke-dashoffset="90" transform="rotate(-90 100 100)"/>
+        <defs><linearGradient id="g" x1="0" y1="0" x2="200" y2="200"><stop stop-color="#fdcf58"/><stop offset="1" stop-color="#ff0000"/></linearGradient></defs>
+        <text x="100" y="96" text-anchor="middle" font-family="Manrope" font-weight="800" font-size="40" fill="#ff0000">+425%</text>
+        <text x="100" y="122" text-anchor="middle" font-family="Inter" font-weight="600" font-size="13" fill="#54607a">Client growth</text>
+      </svg>
+    </div>
+    <div>
+      <span class="eyebrow"><i class="dot"></i> Why we exist</span>
+      <h2>We only work with businesses that are still <span class="grad">small enough to care about.</span></h2>
+      <p class="intro">Big agencies build funnels for enterprise budgets, then squeeze small businesses into the leftover process. We built ours the other way around.</p>
+      <div class="bullets">
+        <div class="bullet"><div class="ico">&#128176;</div><div><h4>You don't have $10K/month for ads. Good.</h4><p>Most of what we do doesn't need it. We build visibility that lasts beyond the invoice.</p></div></div>
+        <div class="bullet"><div class="ico">&#128101;</div><div><h4>No in-house marketing team? We become it.</h4><p>Full-service execution without the overhead salaries that come with hiring.</p></div></div>
+        <div class="bullet"><div class="ico">&#128200;</div><div><h4>Plain-English reporting.</h4><p>Every report answers one question: is this making you more money than it costs?</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section alt" id="services">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow" style="margin-inline:auto"><i class="dot"></i> What we do</span>
+      <h2>Everything a growing business needs to get found — and <span class="grad">stay found</span>.</h2>
+      <p>We don't sell a menu of disconnected line items. We build one visibility plan and pull the levers your business actually needs.</p>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div class="icon">&#128269;</div>
+        <h3>Search Engine Optimization</h3>
+        <p>Keyword research, technical fixes, and content Google actually wants to rank — built to bring in traffic that keeps compounding after the invoice is paid.</p>
+      </div>
+      <div class="card">
+        <div class="icon">&#168996;</div>
+        <h3>Local SEO</h3>
+        <p>Google Business Profile optimization, citations, and review strategy so you own the map pack the moment someone nearby searches "near me."</p>
+      </div>
+      <div class="card">
+        <div class="icon">&#129302;</div>
+        <h3>AI Search Optimization (GEO &amp; AEO)</h3>
+        <p>ChatGPT, Gemini, and Google's AI Overviews are the new front page. We structure your content so AI tools cite your business, not a competitor three results down.</p>
+      </div>
+      <div class="card">
+        <div class="icon">&#127919;</div>
+        <h3>Ads Marketing</h3>
+        <p>Google Ads and paid social that bring in leads while organic rankings are still growing — with a clear read on cost per lead, not just clicks.</p>
+      </div>
+      <div class="card">
+        <div class="icon">&#9999;</div>
+        <h3>Content Marketing</h3>
+        <p>Blogs, landing pages, and guides written to rank, build trust, and move a stranger toward becoming a customer.</p>
+      </div>
+      <div class="card" style="display:flex;flex-direction:column;justify-content:center;align-items:flex-start">
+        <h3>Not sure where to start?</h3>
+        <p>We'll audit what you have and build one clear visibility plan.</p>
+        <a href="#book" class="more">Get a free growth plan &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="section" id="why">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow" style="margin-inline:auto"><i class="dot"></i> Why small businesses pick us</span>
+      <h2>Built around <span class="grad">your size and budget</span>. Nothing else.</h2>
+      <p>We only do this for small businesses. Not a footnote in an enterprise client roster — our process, pricing, and reporting are built for you.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why"><div class="check">&#10003;</div><div><h4>Built for small, not an afterthought</h4><p>Everything we do is engineered for your scale — you're never squeezed into a leftover enterprise process.</p></div></div>
+      <div class="why"><div class="check">&#10003;</div><div><h4>You always know what's happening and why</h4><p>Plain-English monthly reports tied to leads and revenue, not vanity metrics.</p></div></div>
+      <div class="why"><div class="check">&#10003;</div><div><h4>We tell you when something isn't working</h4><p>You'll hear it from us before you have to ask. No hiding behind dashboards.</p></div></div>
+      <div class="why"><div class="check">&#10003;</div><div><h4>No lock-in contracts</h4><p>We keep your business by delivering results, not by making it expensive to leave.</p></div></div>
+    </div>
+    <div style="text-align:center;margin-top:44px">
+      <a href="#book" class="btn btn-primary">Book Your Free Strategy Call &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section class="section alt" id="industries">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow" style="margin-inline:auto"><i class="dot"></i> Industries we specialize in</span>
+      <h2>If you're local and service-driven, <span class="grad">we've got you</span>.</h2>
+    </div>
+    <div class="cards c2">
+      <div class="card"><div class="icon">&#128786;</div><h3>Plumbing SEO</h3><p>Get found the moment someone has a leak, a clog, or a burst pipe. We target emergency and local "near me" searches so you're the first call, not the fifth.</p><a class="more" href="seo-plumbing.html">See Plumbing SEO Services &rarr;</a></div>
+      <div class="card"><div class="icon">&#10052;</div><h3>HVAC SEO</h3><p>Rank for install, repair, and maintenance searches year-round — not just during the summer and winter rush when everyone's competing for the same keywords.</p><a class="more" href="seo-hvac.html">See HVAC SEO Services &rarr;</a></div>
+      <div class="card"><div class="icon">&#10010;</div><h3>Healthcare SEO (Therapy &amp; Dental)</h3><p>Build trust and visibility for a practice where patients research carefully. We optimize local search, service pages, and the reviews that influence a first appointment.</p><a class="more" href="seo-healthcare.html">See Healthcare SEO Services &rarr;</a></div>
+      <div class="card"><div class="icon">&#9878;</div><h3>Lawyer SEO</h3><p>Compete for high-value keywords in a crowded market, with content and local SEO built for the practice areas that bring in real cases.</p><a class="more" href="seo-lawyer.html">See Lawyer SEO Services &rarr;</a></div>
+      <div class="card"><div class="icon">&#128722;</div><h3>Ecommerce SEO</h3><p>Scale organic traffic across product and category pages, fix technical issues that silently kill rankings, and turn search visibility into actual orders.</p><a class="more" href="seo-ecommerce.html">See Ecommerce SEO Services &rarr;</a></div>
+      <div class="card"><div class="icon">&#127860;</div><h3>Restaurant SEO</h3><p>A great menu doesn't matter if Google can't find it. We fix the local listing, the menu pages, and the review flow that decide whether a hungry searcher picks you.</p><a class="more" href="seo-restaurant.html">See Restaurant SEO Services &rarr;</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS / CASE STUDIES -->
+<section class="section" id="results">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow" style="margin-inline:auto"><i class="dot"></i> Proof, not promises</span>
+      <h2>We don't ask you to take our word for it. <span class="grad">We show the numbers.</span></h2>
+    </div>
+    <div class="stack">
+      <div class="case">
+        <div class="grid">
+          <div>
+            <span class="sector">SaaS — Storage Management Software</span>
+            <h3>Storeganise</h3>
+            <p>SEO campaign driving demo bookings and free trial sign-ups for a global self-storage software platform, achieving a #1 Google ranking for "self storage software" — above larger competitors.</p>
+            <a class="view" href="#">View Details &rarr;</a>
+          </div>
+          <div class="metrics">
+            <div class="metric"><div class="num">425%</div><div class="lbl">Trial Sign-Up Growth (YoY)</div></div>
+            <div class="metric"><div class="num">149K</div><div class="lbl">Organic Clicks (16 Months)</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="case">
+        <div class="grid">
+          <div>
+            <span class="sector">Real Estate — Luxury Residential</span>
+            <h3>Paragon Living</h3>
+            <p>Local SEO campaign for a luxury apartment brand in Wolverhampton, UK, capturing prospective tenants at every stage of their search with #1 rankings across local and informational keywords.</p>
+            <a class="view" href="#">View Details &rarr;</a>
+          </div>
+          <div class="metrics">
+            <div class="metric"><div class="num">36.5K</div><div class="lbl">Organic Clicks (16 Months)</div></div>
+            <div class="metric"><div class="num">10+</div><div class="lbl">#1 Google Rankings</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="case">
+        <div class="grid">
+          <div>
+            <span class="sector">Home Services — Window Glazing</span>
+            <h3>Glazing Refurbishments</h3>
+            <p>Content-led SEO campaign built around long-tail how-to and problem-solving searches, taking a UK glazing company from minimal visibility to a recognized authority in its niche.</p>
+            <a class="view" href="#">View Details &rarr;</a>
+          </div>
+          <div class="metrics">
+            <div class="metric"><div class="num">114K</div><div class="lbl">Organic Clicks (16 Months)</div></div>
+            <div class="metric"><div class="num">13+</div><div class="lbl">#1 Google Rankings</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="case">
+        <div class="grid">
+          <div>
+            <span class="sector">Ecommerce — Retail</span>
+            <h3>The Sleepy Sloth</h3>
+            <p>Ongoing SEO campaign scaling organic traffic and expanding keyword footprint across product and category pages for an established ecommerce brand.</p>
+            <a class="view" href="#">View Details &rarr;</a>
+          </div>
+          <div class="metrics">
+            <div class="metric"><div class="num">74.8%</div><div class="lbl">Impression Growth (6 Months)</div></div>
+            <div class="metric"><div class="num">107K</div><div class="lbl">Annual Organic Clicks</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="case">
+        <div class="grid">
+          <div>
+            <span class="sector">Ecommerce — Security &amp; Surveillance</span>
+            <h3>Spy Spot</h3>
+            <p>Long-term organic authority campaign across a broad security and surveillance product catalog, built for scale and sustained visibility.</p>
+            <a class="view" href="#">View Details &rarr;</a>
+          </div>
+          <div class="metrics">
+            <div class="metric"><div class="num">10.1M</div><div class="lbl">Search Impressions (16 Months)</div></div>
+            <div class="metric"><div class="num">93.3K</div><div class="lbl">Organic Clicks (16 Months)</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section alt">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow" style="margin-inline:auto"><i class="dot"></i> What clients say</span>
+      <h2>Small businesses that stopped <span class="grad">losing visibility</span>.</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <q>They were the first agency to tell us honestly what our budget could and couldn't do. Six months in, our local rankings moved and we're finally the first call, not the fifth.</q>
+        <div class="who">— <b>Owner</b>, Local Plumbing Company</div>
+      </div>
+      <div class="testi">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <q>No lock-in, and the reports are in plain English. I actually know what we're paying for every single month. That alone keeps us here.</q>
+        <div class="who">— <b>Practice Manager</b>, Therapy Clinic</div>
+      </div>
+      <div class="testi">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <q>Organic traffic is compounding every month. It feels less like a vendor and more like a marketing team we actually use.</q>
+        <div class="who">— <b>Founder</b>, Ecommerce Brand</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="wrap">
+    <div class="head">
+      <h2>FAQs small business owners actually ask</h2>
+    </div>
+    <div class="faq">
+      <details open>
+        <summary>How fast will I see results? <span class="plus">+</span></summary>
+        <div class="ans"><p>Local SEO and Google Business Profile changes can move within a few weeks. Organic SEO typically shows meaningful movement in 3–4 months and keeps compounding after that — unlike ads, which stop the moment you stop paying.</p></div>
+      </details>
+      <details>
+        <summary>What if I have a small budget? <span class="plus">+</span></summary>
+        <div class="ans"><p>Tell us the number and we'll tell you honestly what it can and can't do. We'd rather scope a smaller, focused plan that works than sell you a package you can't sustain past month two.</p></div>
+      </details>
+      <details>
+        <summary>Do I need to sign a long contract? <span class="plus">+</span></summary>
+        <div class="ans"><p>No. We earn the right to keep working with you every month.</p></div>
+      </details>
+      <details>
+        <summary>How is this different from a big agency or a global firm? <span class="plus">+</span></summary>
+        <div class="ans"><p>Bigger agencies are built to serve enterprise retainers and often bundle in software products or services you don't need. We do one thing — get small businesses found online — and we do it without a 360-degree upsell.</p></div>
+      </details>
+      <details>
+        <summary>What do I actually get in the first 30 days? <span class="plus">+</span></summary>
+        <div class="ans"><p>A full visibility audit, a prioritized action plan, and the first round of fixes already underway.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<div class="wrap" id="book">
+  <div class="cta-final">
+    <span class="eyebrow" style="margin-inline:auto"><i class="dot"></i> Ready when you are</span>
+    <h2>Want to get found online, <span class="grad">right now?</span></h2>
+    <p>Book a free 20-minute call. We'll show you exactly where you're losing visibility and what it would take to fix it — no pressure, no obligation, no generic sales pitch.</p>
+    <a href="#" class="btn btn-primary" style="padding:16px 34px;font-size:1.05rem">Book Your Free 20-Minute Call &rarr;</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="logo" href="#"><span class="mark">&#9670;</span> SBM</a>
+        <p class="foot-about">Practical SEO, local search, and AI search visibility for small businesses that are still small enough to care about.</p>
+      </div>
+      <div>
+        <h5>Services</h5>
+        <a href="#services">SEO</a>
+        <a href="#services">Local SEO</a>
+        <a href="#services">AI Search (GEO/AEO)</a>
+        <a href="#services">Ads Marketing</a>
+        <a href="#services">Content Marketing</a>
+      </div>
+      <div>
+        <h5>Industries</h5>
+        <a href="seo-plumbing.html">Plumbing</a>
+        <a href="seo-hvac.html">HVAC</a>
+        <a href="seo-healthcare.html">Healthcare</a>
+        <a href="seo-lawyer.html">Legal</a>
+        <a href="seo-ecommerce.html">Ecommerce</a>
+        <a href="seo-restaurant.html">Restaurant</a>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <a href="#why">Why Us</a>
+        <a href="#results">Results</a>
+        <a href="#faq">FAQs</a>
+        <a href="#book">Book a Call</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 smallbusinessmarketing.co. All rights reserved.</span>
+      <span>No lock-in contracts · Plain-English reporting</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Single-open FAQ
+  document.querySelectorAll('.faq details').forEach(function(d){
+    d.addEventListener('toggle', function(){
+      if(d.open){ document.querySelectorAll('.faq details[open]').forEach(function(o){ if(o!==d) o.open=false; }); }
+    });
+  });
+</script>
+<script>
+(function(){
+  var sel='.head,.card,.why,.svc,.step,.item,.bullet,.check,.metric,.case,.testi,.region,.cta-final,.work,.callout,.visual,.hero .inner,.faq details';
+  var els=Array.prototype.slice.call(document.querySelectorAll(sel));
+  els.forEach(function(el){el.style.setProperty('--i',Math.min(Array.prototype.indexOf.call(el.parentElement.children,el),6));});
+  if(!('IntersectionObserver' in window)){els.forEach(function(el){el.classList.add('in');});return;}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+  els.forEach(function(el){io.observe(el);});
+})();
+</script>
+</body>
+</html>
