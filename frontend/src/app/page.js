@@ -1,3 +1,5 @@
+
+
 import PageClient from '@/components/PageClient'
 import { getAllContent } from '@/lib/wp'
 import { industries as staticIndustries, caseStudies as staticCaseStudies, testimonials as staticTestimonials, faqs as staticFaqs, marqueeBrands as staticMarqueeBrands } from '@/data/default-content'
