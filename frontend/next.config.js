@@ -9,8 +9,8 @@ const nextConfig = {
     ],
   },
   experimental: {
-    optimizeCss: true,
+    optimizeCss: false,
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
